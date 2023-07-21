@@ -1,1 +1,1 @@
-# calculator
+# calculator - beginner JavaScript Project
