@@ -11,41 +11,41 @@
         <div class="calculator">
             <form>
                 <div class="display">
-                    <input type="text" name="display">
+                    <input type="text" id="outputScreen">
                 </div>
 
                 <div>
-                    <input type="button" value="Clear" onclick="display.value = ''" class="operator">
-                    <input type="button" value="Del" onclick="display.value = display.value.toString().slice(0, -1)" class="operator">
-                    <input type="button" value="%" class="operator">
-                    <input type="button" value="/" onclick="display.value += '/'" class="operator">
+                    <input type="button" value="Clear" onclick="clearr()" class="operator">
+                    <input type="button" value="Del" onclick="deletee()" class="operator">
+                    <input type="button" value="%" onclick="percentage()" class="operator">
+                    <input type="button" value="/" onclick="display('/')" class="operator">
                 </div>
         
                 <div>
-                    <input type="button" value="7" onclick="display.value += '7'">
-                    <input type="button" value="8" onclick="display.value += '8'">
-                    <input type="button" value="9" onclick="display.value += '9'">
-                    <input type="button" value="*" onclick="display.value += '*'" class="operator">
+                    <input type="button" value="7" onclick="display('7')">
+                    <input type="button" value="8" onclick="display('8')">
+                    <input type="button" value="9" onclick="display('9')">
+                    <input type="button" value="*" onclick="display('*')" class="operator">
                 </div>
         
                 <div>
-                    <input type="button" value="4" onclick="display.value += '4'">
-                    <input type="button" value="5" onclick="display.value += '5'">
-                    <input type="button" value="6" onclick="display.value += '6'">
-                    <input type="button" value="-" onclick="display.value += '-'" class="operator">
+                    <input type="button" value="4" onclick="display('4')">
+                    <input type="button" value="5" onclick="display('5')">
+                    <input type="button" value="6" onclick="display('6')">
+                    <input type="button" value="-" onclick="display('-')" class="operator">
                 </div>
         
                 <div>
-                    <input type="button" value="1" onclick="display.value += '1'">
-                    <input type="button" value="2" onclick="display.value += '2'">
-                    <input type="button" value="3" onclick="display.value += '3'">
-                    <input type="button" value="+" onclick="display.value += '+'" class="operator">
+                    <input type="button" value="1" onclick="display('1')">
+                    <input type="button" value="2" onclick="display('2')">
+                    <input type="button" value="3" onclick="display('3')">
+                    <input type="button" value="+" onclick="display('+')" class="operator">
                 </div>
         
                 <div>
-                    <input type="button" value="." onclick="display.value += '.'">
-                    <input type="button" value="0" onclick="display.value += '0'">
-                    <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)">
+                    <input type="button" value="." onclick="display('.')">
+                    <input type="button" value="0" onclick="display('0')">
+                    <input type="button" value="=" class="equal operator" onclick="calculate()">
                 </div>
             </form>
         </div>
