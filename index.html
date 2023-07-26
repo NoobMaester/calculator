@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
+
 <body>
     <div class="container">
+        <h1>Simple JS Calculator</h1>
+        
         <div class="calculator">
-            <form>
-                <div class="display">
-                    <input type="text" id="outputScreen">
-                </div>
+            <input type="text" id="display" disabled>
+            <button class="operator equal" onclick="clearDisplay()">Clear</button>
 
-                <div>
-                    <input type="button" value="Clear" onclick="clearr()" class="operator">
-                    <input type="button" value="Del" onclick="deletee()" class="operator">
-                    <input type="button" value="%" onclick="percentage()" class="operator">
-                    <input type="button" value="/" onclick="display('/')" class="operator">
-                </div>
-        
-                <div>
-                    <input type="button" value="7" onclick="display('7')">
-                    <input type="button" value="8" onclick="display('8')">
-                    <input type="button" value="9" onclick="display('9')">
-                    <input type="button" value="*" onclick="display('*')" class="operator">
-                </div>
-        
-                <div>
-                    <input type="button" value="4" onclick="display('4')">
-                    <input type="button" value="5" onclick="display('5')">
-                    <input type="button" value="6" onclick="display('6')">
-                    <input type="button" value="-" onclick="display('-')" class="operator">
-                </div>
-        
-                <div>
-                    <input type="button" value="1" onclick="display('1')">
-                    <input type="button" value="2" onclick="display('2')">
-                    <input type="button" value="3" onclick="display('3')">
-                    <input type="button" value="+" onclick="display('+')" class="operator">
-                </div>
-        
-                <div>
-                    <input type="button" value="." onclick="display('.')">
-                    <input type="button" value="0" onclick="display('0')">
-                    <input type="button" value="=" class="equal operator" onclick="calculate()">
-                </div>
-            </form>
+            <div>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+
+                <button class="operator" onclick="appendToDisplay('+')">+</button>
+            </div>
+
+            <div>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button class="operator" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button class="operator" onclick="appendToDisplay('*')">*</button>
+            </div>
+            <div>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button class="operator equals" onclick="operate()">=</button>
+                <button class="operator" onclick="appendToDisplay('/')">/</button>
+            </div>
+
         </div>
-        
+
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>

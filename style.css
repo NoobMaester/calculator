@@ -13,12 +13,23 @@
     align-items: center;
     justify-content: center;
 }
+.container h1{
+    margin-right: 2rem;
+}
 .calculator{
     background: #3a4452;
     padding: 2rem;
     border-radius: 10px;
+    text-align: center;
 }
-.calculator form input{
+.calculator input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #e3f9ff;
+}
+.calculator button{
     border: 0;
     outline: 0;
     width: 60px;
@@ -30,21 +41,31 @@
     cursor: pointer;
     margin: 5px;
 }
-form .display{
+.display{
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
     margin: 20px 0;
+    height: 50px;
+
 }
-form .display input{
+.previous,
+.current{
     text-align: right;
     flex: 1;
     font-size: 45px;
+    color: #e3f9ff;
 }
-form input.equal{
-    width: 135px;
+.current{
+    font-size: 35px;
+    /* border-top: #e3f9ff solid 1px; */
 }
 
-form input.operator{
+button.equal{
+    width: 100%;
+}
+
+button.operator{
     color: #33ffd8;
     background: #063970;
 }
